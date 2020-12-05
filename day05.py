@@ -3,7 +3,7 @@ with open("day05_input.txt", "r") as file:
 
 passes = [x[:-1] for x in data]
 
-to_add = [[0,64],[0,32],[0,16],[0,8],[0,4],[0,2],[0,1]]
+to_add = [[0, 64], [0, 32], [0, 16], [0, 8], [0, 4], [0, 2], [0, 1]]
 
 def string_to_num(string):
     number = 0
