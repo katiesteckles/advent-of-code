@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="75f7b0c9-bc75-4c8f-a49b-075e6db349bd" name="Default Changelist" comment="" />
+    <list default="true" id="75f7b0c9-bc75-4c8f-a49b-075e6db349bd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/day07.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,14 +62,34 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="184" y="29" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607190818216">
+    <state x="184" y="29" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607363776434">
       <screen x="0" y="23" width="1440" height="767" />
     </state>
-    <state x="184" y="29" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.767@0.23.1440.767" timestamp="1607190818216" />
-    <state x="385" y="114" width="670" height="676" key="search.everywhere.popup" timestamp="1607275556830">
+    <state x="184" y="29" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.767@0.23.1440.767" timestamp="1607363776434" />
+    <state x="508" y="288" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607364018651">
       <screen x="0" y="23" width="1440" height="767" />
     </state>
-    <state x="385" y="114" width="670" height="676" key="search.everywhere.popup/0.23.1440.767@0.23.1440.767" timestamp="1607275556830" />
+    <state x="508" y="288" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.767@0.23.1440.767" timestamp="1607364018651" />
+    <state x="369" y="90" width="700" height="530" key="recent.locations.popup" timestamp="1607369264146">
+      <screen x="0" y="23" width="1440" height="767" />
+    </state>
+    <state x="369" y="90" width="700" height="530" key="recent.locations.popup/0.23.1440.767@0.23.1440.767" timestamp="1607369264146" />
+    <state x="385" y="114" width="670" height="676" key="search.everywhere.popup" timestamp="1607370418615">
+      <screen x="0" y="23" width="1440" height="767" />
+    </state>
+    <state x="385" y="114" width="670" height="676" key="search.everywhere.popup/0.23.1440.767@0.23.1440.767" timestamp="1607370418615" />
   </component>
 </project>
