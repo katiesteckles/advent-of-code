@@ -5,17 +5,12 @@ with open("day09_input.txt", "r") as file:
 numbers = [int(number[:-1]) for number in numbers[:-1]]
 window_length= 25
 
-# check the 26th number to see if it can be made from two of the numbers between the 1st and 25th number
-# check the 27th number to see if it can be made from two of the numbers between the 2nd and 26th number
-# check the 28th number to see if it can be made from two of the numbers between the 3rd and 27th number
-
 for aim_sum_index in range(window_length+1, len(numbers)):
     aim_sum = numbers[aim_sum_index]
     print('Total needed: ' + str(aim_sum))
     found_it = 0
     for j in range(window_length):
         for k in range(j, window_length):
-            # print('Trying ' + str(numbers[aim_sum_index-window_length+j]) + ' + ' + str(numbers[aim_sum_index-window_length+k]) + '...')
             if numbers[aim_sum_index - window_length + j] + numbers[aim_sum_index - window_length + k] == aim_sum:
                 print(str(numbers[aim_sum_index - window_length + j]) + ' + ' + str(
                     numbers[aim_sum_index - window_length + k]) + ' = ' + str(aim_sum))
