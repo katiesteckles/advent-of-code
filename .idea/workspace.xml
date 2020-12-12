@@ -20,6 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75f7b0c9-bc75-4c8f-a49b-075e6db349bd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/day12.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/day12_part2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -96,10 +98,21 @@
     </state>
     <state x="369" y="90" width="700" height="530" key="recent.locations.popup/0.23.1440.767@0.23.1440.767" timestamp="1607537769502" />
     <state x="369" y="91" width="700" height="526" key="recent.locations.popup/0.25.1440.760@0.25.1440.760" timestamp="1607714529591" />
-    <state x="385" y="115" width="670" height="670" key="search.everywhere.popup" timestamp="1607717812698">
+    <state x="385" y="115" width="670" height="670" key="search.everywhere.popup" timestamp="1607778039399">
       <screen x="0" y="25" width="1440" height="760" />
     </state>
     <state x="385" y="114" width="670" height="676" key="search.everywhere.popup/0.23.1440.767@0.23.1440.767" timestamp="1607536118652" />
-    <state x="385" y="115" width="670" height="670" key="search.everywhere.popup/0.25.1440.760@0.25.1440.760" timestamp="1607717812698" />
+    <state x="385" y="115" width="670" height="670" key="search.everywhere.popup/0.25.1440.760@0.25.1440.760" timestamp="1607778039399" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/day12.py</url>
+          <line>10</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
