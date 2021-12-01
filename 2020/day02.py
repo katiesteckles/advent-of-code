@@ -1,4 +1,4 @@
-with open("day2_input.txt", "r") as file:
+with open("day02_input.txt", "r") as file:
     passwords = file.readlines()
 
 passwords_split = [[x[0].split("-")[0],x[0].split("-")[1].split(" ")[0],x[0].split("-")[1].split(" ")[1],x[1][:-1]] for x in [y.split(": ") for y in passwords]]

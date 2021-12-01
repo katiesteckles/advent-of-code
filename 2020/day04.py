@@ -1,4 +1,4 @@
-with open("day4_input.txt", "r") as file:
+with open("day04_input.txt", "r") as file:
     data = file.readlines()
 
 data = [x[:-1] for x in data]  # raw lines

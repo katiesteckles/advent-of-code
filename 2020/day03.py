@@ -1,4 +1,4 @@
-with open("day3_input.txt", "r") as file:
+with open("day03_input.txt", "r") as file:
     trees = file.readlines()
 trees = [x[:-1] for x in trees]
 
