@@ -12,7 +12,7 @@ for i in range(len(nums_int)):
     else:
         incdecs.append(0)
 
-totalincs = sum([x for x in incdecs])
+totalincs = sum(incdecs)
 
 # part 2
 
@@ -23,4 +23,4 @@ for i in range(len(numbers_int)-2):
     else:
         incdecs2.append(0)
 
-totalincs2 = sum([x for x in incdecs2])
+totalincs2 = sum(incdecs2)
