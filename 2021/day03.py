@@ -50,14 +50,18 @@ sets.append(check_and_chop(numbers_id,0))
 for i in range(len(numbers[0])-1):
     sets.append(check_and_chop(sets[-1],0))
 
-oxgen = numbers_id[sets[-1][0][0]]
+oxgen = numbers_id[sets[-1][0][-1]]
 
 sets_co2 = []
 sets_co2.append(check_and_chop_co2(numbers_id,0))
 for i in range(len(numbers[0])-1):
-    sets_co2.append(check_and_chop_co2(sets_co2[-1],0))
+    try:
+        sets_co2.append(check_and_chop_co2(sets_co2[-1],0))
+    except IndexError:
+        sets_co2 = sets_co2[:-1]
+        break
 
-co2gen = numbers_id[sets_co2[-2][0][-1]]
+co2gen = numbers_id[sets_co2[-1][0][-1]]
 
 oxnum = int(''.join(oxgen[:-1]),2)
 co2num = int(''.join(co2gen[:-1]),2)
