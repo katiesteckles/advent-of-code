@@ -49,6 +49,7 @@ for line in horzverts:
     dict_a_line(line,vents)
 
 danger_spots = [decode_vent(x) for x in vents if vents[x]>1]
+len(danger_spots)
 
 # part 2
 
@@ -57,3 +58,4 @@ for line in list_of_lines:
     dict_a_line(line,vents2)
 
 danger_spots2 = [decode_vent(x) for x in vents2 if vents2[x]>1]
+len(danger_spots2)
