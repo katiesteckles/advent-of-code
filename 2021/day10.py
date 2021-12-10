@@ -53,10 +53,10 @@ illegals = [error.split(',') for error in errors if error != 'Incomplete']
 total = sum([scores_dict[error[0]] for error in illegals])
 print(total)
 
-errors = [check_brackets(test_input[i]) for i in range(len(test_input))]
-illegals = [error.split(',') for error in errors if error != 'Incomplete']
-total = sum([scores_dict[error[0]] for error in illegals])
-print(total)
+#errors = [check_brackets(test_input[i]) for i in range(len(test_input))]
+#illegals = [error.split(',') for error in errors if error != 'Incomplete']
+#total = sum([scores_dict[error[0]] for error in illegals])
+#print(total)
 
 # part 2
 
