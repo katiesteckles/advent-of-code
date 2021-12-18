@@ -109,6 +109,7 @@ input_for_p2 = [characterise(line) for line in input]
 mangoes = []
 for line1 in input_for_p2:
     for line2 in input_for_p2:
-        mangoes.append(int(calculate_magnitude(snailsum(['['] + line1 + line2 + [']']))[0]))
+        if line1 != line2:
+            mangoes.append(int(calculate_magnitude(snailsum(['['] + line1 + line2 + [']']))[0]))
 
 print(max(mangoes))
