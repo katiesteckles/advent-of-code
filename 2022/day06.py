@@ -9,12 +9,12 @@ def window_check(window,n):
 
 
 def find_window(input_string,n):
-    for i in range(n,len(input_string) + 1):
+    for i in range(n, len(input_string) + 1):
         if window_check(input_string[i - n:i],n):
             return i
 
 
-test_1 = 'nznrnfrfntjfmvfwmzdfjlvtqnbhcprsg'
+test_1 = 'nznrnfrfntjfmvfwmzdfjlvtqnbhcprsg'  # should be 10
 
 find_window(test_1,4)
 find_window(input,4)
