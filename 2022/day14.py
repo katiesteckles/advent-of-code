@@ -45,6 +45,10 @@ def drop_a_bit_of_sand(dict, floor_height):
         # if nozzle is clogged
         if dict.get((current_sand_location[0],current_sand_location[1])) == 'o':
             sand_not_moving = 1
+        # if it's fallen off the bottom
+        if current_sand_location[1] > floor_height:
+            dict[current_sand_location] = '~'
+            sand_not_moving = 1
         # if the space below the current location is empty
         elif dict.get((current_sand_location[0], current_sand_location[1]+1), 'No') == 'No':
         # move the sand down
@@ -81,22 +85,29 @@ def visualise_sand(dict):
     return grid
 
 
-#sands_dropped = 0
-#while True:
-#    drop_a_bit_of_sand(test_dict, test_floor_height)
-#    sands_dropped +=1
-#    print(sands_dropped)
-
-# the answer is one more than this apparently
+sands_dropped = 0
+while '~' not in big_dict_energy.values():
+    drop_a_bit_of_sand(big_dict_energy, floor_height)
+    sands_dropped +=1
+    print(sands_dropped)
 
 # Part B
 
-
 test_triangle_height = test_floor_height - initial_point[1]
-read_in_line(test_dict, [[int(490-(test_triangle_height/2)), test_floor_height],[int(510+(test_triangle_height/2)),test_floor_height]])
+read_in_line(test_dict, [[500-test_triangle_height, test_floor_height],[510+test_triangle_height,test_floor_height]])
 
 triangle_height = floor_height - initial_point[1]
-read_in_line(big_dict_energy, [[int(400-(triangle_height/2)), floor_height],[int(600+(triangle_height/2)),floor_height]])
+read_in_line(big_dict_energy, [[500-triangle_height, floor_height],[500+triangle_height,floor_height]])
+
+# redefine dictionaries
+
+test_dict = {}
+for line in coordinate_pairs_test:
+    test_dict = read_in_line(test_dict, line)
+
+big_dict_energy = {}
+for line in coordinate_pairs:
+    big_dict_energy = read_in_line(big_dict_energy,line)
 
 
 sands_dropped = 0
