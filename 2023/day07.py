@@ -1,4 +1,4 @@
-with open("2023/day07_input.txt","r") as file:
+with open("2023/day07_input.txt", "r") as file:
     input = file.readlines()
     input = [line.strip().split(' ') for line in input]
 
@@ -28,6 +28,7 @@ card_ranks = {
     'A': 12
 }
 
+
 def hand_type(hand):
     if len(set(hand)) == 1:
         return 'five'
@@ -54,7 +55,8 @@ def hand_type(hand):
     elif len(set(hand)) == 5:
         return 'high'
 
-def compare_cards(hand1,hand2):  # takes in two five-character strings
+
+def compare_cards(hand1, hand2):  # takes in two five-character strings
     if hand_types[hand_type(hand1)] > hand_types[hand_type(hand2)]:
         return hand1
     elif hand_types[hand_type(hand1)] < hand_types[hand_type(hand2)]:
@@ -66,6 +68,7 @@ def compare_cards(hand1,hand2):  # takes in two five-character strings
             elif card_ranks[hand1[i]] < card_ranks[hand2[i]]:
                 return hand2
 
+
 import copy
 
 test_input = [['32T3K', '765'], ['T55J5', '684'], ['KK677', '28'], ['KTJJT', '220'], ['QQQJA', '483']]
@@ -74,16 +77,16 @@ cards_list = copy.deepcopy(input)
 nochange = 0
 runthrough = 0
 while nochange == 0:
-    runthrough +=1
-    print('Round '+str(runthrough))
+    runthrough += 1
+    print('Round ' + str(runthrough))
     newlist = copy.deepcopy(cards_list)
-    for i in range(len(cards_list)-1):
-        print('Comparing cards '+str(i)+' and '+str(i+1)+'...')
-        if compare_cards(newlist[i][0], newlist[i+1][0]) == newlist[i][0]:
+    for i in range(len(cards_list) - 1):
+        print('Comparing cards ' + str(i) + ' and ' + str(i + 1) + '...')
+        if compare_cards(newlist[i][0], newlist[i + 1][0]) == newlist[i][0]:
             print('Swapping!')
             temp = newlist[i]
-            newlist[i] = newlist[i+1]
-            newlist[i+1] = temp
+            newlist[i] = newlist[i + 1]
+            newlist[i + 1] = temp
     if newlist == cards_list:
         nochange = 1
     else:
@@ -91,10 +94,9 @@ while nochange == 0:
 
 total_score = 0
 for i in range(len(cards_list)):
-    total_score += (i+1)*int(cards_list[i][1])
+    total_score += (i + 1) * int(cards_list[i][1])
 
 print(total_score)
-
 
 # PART 2
 
@@ -114,18 +116,18 @@ jard_ranks = {
     'A': 12
 }
 
-
 counts_dict = {
-    (1, 4):'four',
-    (2, 3) : 'full',
-    (5,) : 'five',
-    (1, 4) : 'four',
-    (2, 3) : 'full',
-    (1, 1, 3) : 'three',
-    (1, 2, 2) : 'twopair',
-    (1, 1, 1, 2) : 'pair',
-    (1, 1, 1, 1, 1) : 'high'
+    (1, 4): 'four',
+    (2, 3): 'full',
+    (5,): 'five',
+    (1, 4): 'four',
+    (2, 3): 'full',
+    (1, 1, 3): 'three',
+    (1, 2, 2): 'twopair',
+    (1, 1, 1, 2): 'pair',
+    (1, 1, 1, 1, 1): 'high'
 }
+
 
 def jand_type(hand):
     if len(set(hand)) == 1:
@@ -140,7 +142,8 @@ def jand_type(hand):
         counts[-1] += jokers
         return counts_dict[tuple(counts)]
 
-def jompare_cards(hand1,hand2):  # takes in two five-character strings
+
+def jompare_cards(hand1, hand2):  # takes in two five-character strings
     if hand_types[jand_type(hand1)] > hand_types[jand_type(hand2)]:
         return hand1
     elif hand_types[jand_type(hand1)] < hand_types[jand_type(hand2)]:
@@ -152,20 +155,21 @@ def jompare_cards(hand1,hand2):  # takes in two five-character strings
             elif jard_ranks[hand1[i]] < jard_ranks[hand2[i]]:
                 return hand2
 
+
 cards_list = copy.deepcopy(input)
 nochange = 0
 runthrough = 0
 while nochange == 0:
-    runthrough +=1
-    print('Round '+str(runthrough))
+    runthrough += 1
+    print('Round ' + str(runthrough))
     newlist = copy.deepcopy(cards_list)
-    for i in range(len(cards_list)-1):
-        print('Jomparing cards '+str(i)+' and '+str(i+1)+'...')
-        if jompare_cards(newlist[i][0], newlist[i+1][0]) == newlist[i][0]:
+    for i in range(len(cards_list) - 1):
+        print('Jomparing cards ' + str(i) + ' and ' + str(i + 1) + '...')
+        if jompare_cards(newlist[i][0], newlist[i + 1][0]) == newlist[i][0]:
             print('Swapping!')
             temp = newlist[i]
-            newlist[i] = newlist[i+1]
-            newlist[i+1] = temp
+            newlist[i] = newlist[i + 1]
+            newlist[i + 1] = temp
     if newlist == cards_list:
         nochange = 1
     else:
@@ -173,6 +177,6 @@ while nochange == 0:
 
 jotal_score = 0
 for i in range(len(cards_list)):
-    jotal_score += (i+1)*int(cards_list[i][1])
+    jotal_score += (i + 1) * int(cards_list[i][1])
 
 print(jotal_score)
