@@ -81,7 +81,7 @@ righty_dict = {
 }
 
 def everything_you_owns_in_a_box_to_the_dict(route_list, dict):
-    lefts = set()
+    lefts = set() # I realise this shouldn't be called 'lefts' any more now this is a multi-directional function but I don't care
     for i in range(len(route_list)-1):
         change = (route_list[i+1][0] - route_list[i][0], route_list[i+1][1] - route_list[i][1])
         new_left = (route_list[i+1][0] + dict[change][0], route_list[i+1][1] + dict[change][1])
